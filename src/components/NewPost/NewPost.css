@@ -1,0 +1,10 @@
+.container__new-post {
+    flex-direction: row;
+    justify-content: end;
+}
+
+
+
+.new-post__btn {
+    background-color: hsl(210, 80%, 50%);
+}

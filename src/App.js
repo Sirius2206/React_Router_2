@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import useJsonFetch from "./components/hooks/useJsonFetch";
+import "./App.css";
+// import NewPost from "./components/NewPost/NewPost";
+import Card from "./components/Card/Card";
+import CreatePost from "./components/CreatePost/CreatePost";
+import { Route, Routes } from "react-router-dom";
+import Home from "./components/Home/Home";
+import CardEdit from "./components/Card/CardEdit";
+
 
 function App() {
+  const [data, loading, error] = useJsonFetch("http://localhost:7777/posts");
+  console.log(data);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div className="app__container">
+        <Routes>
+          <Route path="/" element={<Home data={data} />} />
+          <Route path="/posts/new" element={<CreatePost />} />
+          <Route path="/posts/:id" element={<CardEdit data={data} />} />
+        </Routes>
+      </div>
   );
 }
 

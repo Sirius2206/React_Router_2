@@ -1,0 +1,96 @@
+.container__card {
+    flex-direction: column;
+    max-width: 600px;
+}
+
+.card__header {
+    display: flex;
+    flex-direction: row;
+}
+
+.avatar {
+    background-color: hsla(234, 100%, 50%, 0.671);
+    border-radius: 50%;
+
+    margin-right: 1em;
+}
+
+.header__avatar {
+    width: 50px;
+    height: 50px;
+    
+}
+
+.card__person {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: smaller;
+}
+.person__name {
+    color:blue;
+    font-weight: bold;
+}
+
+.person__info {
+    font-size: smaller;
+}
+
+.info__role {
+    font-weight: bold;
+}
+
+.info__time {
+    margin-left: .5em;
+    color: gray;
+}
+
+.card__content {
+    font-size: larger;
+    border-bottom: 1px solid lightgray;
+    padding: .5em;
+}
+
+.card__buttons {
+    display: flex;
+    justify-content: space-around;
+    padding: .5em;
+}
+
+.card__btn {
+    border: none;
+    background-color: white;
+    color: gray;
+}
+
+.card__footer {
+    width: 100%;
+    border-top: 1px solid gray;
+
+    display: flex;
+    padding: .5em;
+}
+
+.footer__avatar {
+    width: 30px;
+    height: 30px;
+}
+
+.card__comment-input {
+    border: 1px inset lightgray;
+    border-radius: 100px;
+    width: 100%;
+    padding: 0 1em;
+}
+
+.card-edit__footer {
+    justify-content: end;
+}
+
+.card-edit__btn {
+    background-color: hsl(210, 80%, 50%);
+}
+
+.delete-btn {
+    background-color: red;
+}
